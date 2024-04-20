@@ -2,7 +2,7 @@ class Stock:
     __slots__ = ('name', '_shares', 'price')
     def __init__(self, name, shares, price):
         self.name = name
-        self.shares = shares
+        self._shares = shares
         self.price = price
 
     @property
@@ -17,6 +17,7 @@ class Stock:
     def shares(self, value):
         if not isinstance(value, int):
             raise TypeError('Expected int')
+        self._shares = value
 
     def sell(self, amount):
         self.shares -= amount
