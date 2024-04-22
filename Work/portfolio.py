@@ -16,6 +16,8 @@ class Portfolio:
         portdicts = parse_csv(lines, select=['name', 'shares', 'price'], types=[str, int, float], **opts)
         for d in portdicts:
             self.append(Stock(**d))
+    
+        return self
 
     def __iter__(self):
         return self._holdings.__iter__()
