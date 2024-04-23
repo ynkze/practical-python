@@ -1,7 +1,6 @@
-from fileparse import parse_csv
-from stock import Stock
-from portfolio import Portfolio
-from tableformat import create_formatter
+from .fileparse import parse_csv
+from .portfolio import Portfolio
+from .tableformat import create_formatter
 
 def read_portfolio(filename, **opts):
     with open(filename) as lines:

@@ -1,6 +1,6 @@
-from follow import follow
-from tableformat import create_formatter
-from report import read_portfolio
+from .follow import follow
+from .tableformat import create_formatter
+from .report import read_portfolio
 import csv
 
 def select_columns(rows, indices):

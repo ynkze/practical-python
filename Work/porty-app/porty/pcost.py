@@ -1,5 +1,5 @@
 import sys
-import report
+import porty.report as report
 
 def portfolio_cost(filename):
     portfolio = report.read_portfolio(filename)
